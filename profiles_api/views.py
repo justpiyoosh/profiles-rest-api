@@ -132,7 +132,7 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
     queryset = models.ProfileFeedItem.objects.all()
     permission_classes = (
         permissions.UpdateOwnStatus,
-        IsAuthenticate
+        IsAuthenticated
     )
 
     def perform_create(self, serializer):
